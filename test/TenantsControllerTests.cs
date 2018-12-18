@@ -29,6 +29,9 @@ namespace Tenants.API.UnitTests
             // Assert
             Assert.IsType<OkObjectResult>(okResult.Result);
             mockTenantService.Verify(x => x.GetByIdAsync(It.IsAny<Guid>()), Times.Once());
+
+            // Reference #1: https://code-maze.com/unit-testing-aspnetcore-web-api/
+            // Reference #2: http://dontcodetired.com/blog/post/Mocking-in-NET-Core-Tests-with-Moq
         }
     }
 }
